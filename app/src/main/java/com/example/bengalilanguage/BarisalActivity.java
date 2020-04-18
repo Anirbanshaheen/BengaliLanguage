@@ -14,7 +14,7 @@ import com.google.android.material.tabs.TabLayout;
 
 public class BarisalActivity extends AppCompatActivity {
     private TabLayout tabLayoutBarisal;
-    private ViewPager viewPager2Barisal;
+    private ViewPager viewPagerBarisal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +22,9 @@ public class BarisalActivity extends AppCompatActivity {
         setContentView(R.layout.activity_barisal);
 
         tabLayoutBarisal = findViewById(R.id.barisalTabLayout);
-        viewPager2Barisal = findViewById(R.id.viewPagerBarisal);
+        viewPagerBarisal = findViewById(R.id.viewPagerBarisal);
 //        MyPagerAdapter myPagerAdapter = new MyPagerAdapter(getSupportFragmentManager(), tabLayoutBarisal.getTabCount());
-        viewPager2Barisal.setAdapter(new MyPagerAdapter(getSupportFragmentManager(),tabLayoutBarisal.getTabCount()));
+        viewPagerBarisal.setAdapter(new MyPagerAdapter(getSupportFragmentManager(),tabLayoutBarisal.getTabCount()));
     }
 
     public static class MyPagerAdapter extends FragmentPagerAdapter {
