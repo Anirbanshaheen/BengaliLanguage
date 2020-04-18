@@ -20,7 +20,6 @@ public class BarisalActivity extends AppCompatActivity {
     private TabLayout tabLayoutBarisal;
     private ViewPager viewPager2Barisal;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,18 +27,19 @@ public class BarisalActivity extends AppCompatActivity {
 
         tabLayoutBarisal = findViewById(R.id.barisalTabLayout);
         viewPager2Barisal = findViewById(R.id.viewPagerBarisal);
-
-        viewPager2Barisal.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
+        MyPagerAdapter myPagerAdapter = new MyPagerAdapter(getSupportFragmentManager(), tabLayoutBarisal.getTabCount());
+        viewPager2Barisal.setAdapter(myPagerAdapter);
     }
 
-    public class MyPagerAdapter extends FragmentPagerAdapter {
+    public static class MyPagerAdapter extends FragmentPagerAdapter {
 
         String[] text = {"Relation", "Food", "Phrase"};
 
         public MyPagerAdapter(@NonNull FragmentManager fm, int behavior) {
             super(fm, behavior);
+        public MyPagerAdapter(@NonNull FragmentManager fm, int b) {
+            super(fm, b);
         }
-
 
         @NonNull
         @Override
