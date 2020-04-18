@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tan_background">
+        <TextView
+            android:id="@+id/barisalMA"
+            style="@style/CategoryStyle"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="Barisal Local Language" />
+    </FrameLayout>
+
+    <!--<FrameLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/category_family">-->
+        <!--<TextView-->
+            <!--android:id="@+id/family"-->
+            <!--style="@style/CategoryStyle"-->
+            <!--android:background="?android:attr/selectableItemBackground"-->
+            <!--android:text="@string/family" />-->
+    <!--</FrameLayout>-->
+
+    <!--<FrameLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/category_colors">-->
+        <!--<TextView-->
+            <!--android:id="@+id/colors"-->
+            <!--style="@style/CategoryStyle"-->
+            <!--android:background="?android:attr/selectableItemBackground"-->
+            <!--android:text="@string/color" />-->
+    <!--</FrameLayout>-->
+
+    <!--<FrameLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/category_phrases">-->
+        <!--<TextView-->
+            <!--android:id="@+id/phrase"-->
+            <!--style="@style/CategoryStyle"-->
+            <!--android:background="?android:attr/selectableItemBackground"-->
+            <!--android:text="@string/phrase" />-->
+    <!--</FrameLayout>-->
+
+
+
+</LinearLayout>
