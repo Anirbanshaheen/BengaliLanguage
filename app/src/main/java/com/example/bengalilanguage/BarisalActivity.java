@@ -6,12 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.widget.ViewPager2;
 
-import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
@@ -27,8 +23,8 @@ public class BarisalActivity extends AppCompatActivity {
 
         tabLayoutBarisal = findViewById(R.id.barisalTabLayout);
         viewPager2Barisal = findViewById(R.id.viewPagerBarisal);
-        MyPagerAdapter myPagerAdapter = new MyPagerAdapter(getSupportFragmentManager(), tabLayoutBarisal.getTabCount());
-        viewPager2Barisal.setAdapter(myPagerAdapter);
+//        MyPagerAdapter myPagerAdapter = new MyPagerAdapter(getSupportFragmentManager(), tabLayoutBarisal.getTabCount());
+        viewPager2Barisal.setAdapter(new MyPagerAdapter(getSupportFragmentManager(),tabLayoutBarisal.getTabCount()));
     }
 
     public static class MyPagerAdapter extends FragmentPagerAdapter {
@@ -37,10 +33,7 @@ public class BarisalActivity extends AppCompatActivity {
 
         public MyPagerAdapter(@NonNull FragmentManager fm, int behavior) {
             super(fm, behavior);
-        public MyPagerAdapter(@NonNull FragmentManager fm, int b) {
-            super(fm, b);
         }
-
         @NonNull
         @Override
         public Fragment getItem(int position) {
