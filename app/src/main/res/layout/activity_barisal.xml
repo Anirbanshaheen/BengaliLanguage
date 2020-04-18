@@ -12,7 +12,7 @@
         android:id="@+id/barisalTabLayout"
         android:layout_height="wrap_content"/>
 
-    <androidx.viewpager2.widget.ViewPager2
+    <androidx.viewpager.widget.ViewPager
         android:layout_width="match_parent"
         android:id="@+id/viewPagerBarisal"
         android:layout_height="match_parent"/>

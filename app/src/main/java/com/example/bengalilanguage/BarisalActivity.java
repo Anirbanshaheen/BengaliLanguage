@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.app.Activity;
@@ -17,7 +18,7 @@ import com.google.android.material.tabs.TabLayout;
 
 public class BarisalActivity extends AppCompatActivity {
     private TabLayout tabLayoutBarisal;
-    private ViewPager2 viewPager2Barisal;
+    private ViewPager viewPager2Barisal;
 
 
     @Override
@@ -35,8 +36,8 @@ public class BarisalActivity extends AppCompatActivity {
 
         String[] text = {"Relation", "Food", "Phrase"};
 
-        public MyPagerAdapter(@NonNull FragmentManager fm) {
-            super(fm);
+        public MyPagerAdapter(@NonNull FragmentManager fm, int behavior) {
+            super(fm, behavior);
         }
 
 
