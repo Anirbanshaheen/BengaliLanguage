@@ -24,15 +24,35 @@ public class BarisalActivity extends AppCompatActivity {
         tabLayoutBarisal = findViewById(R.id.barisalTabLayout);
         viewPagerBarisal = findViewById(R.id.viewPagerBarisal);
 //        MyPagerAdapter myPagerAdapter = new MyPagerAdapter(getSupportFragmentManager(), tabLayoutBarisal.getTabCount());
-        viewPagerBarisal.setAdapter(new MyPagerAdapter(getSupportFragmentManager(),tabLayoutBarisal.getTabCount()));
+        viewPagerBarisal.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
+
+        tabLayoutBarisal.setupWithViewPager(viewPagerBarisal);
+
+        tabLayoutBarisal.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPagerBarisal.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
     }
 
     public static class MyPagerAdapter extends FragmentPagerAdapter {
 
         String[] text = {"Relation", "Food", "Phrase"};
 
-        public MyPagerAdapter(@NonNull FragmentManager fm, int behavior) {
-            super(fm, behavior);
+        public MyPagerAdapter(@NonNull FragmentManager fm) {
+            super(fm);
         }
         @NonNull
         @Override
